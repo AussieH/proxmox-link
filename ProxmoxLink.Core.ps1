@@ -4,7 +4,7 @@
 # What Proxmox Link does: it reads Proxmox VE, Proxmox Backup Server and Proxmox Datacenter Manager with a read-only API
 # token and writes what it reads to %APPDATA%\ProxmoxControl\state.json, the file the Proxmox Dashboard widget for the
 # CORSAIR XENEON EDGE watches. The file is the one the Stream Deck plugin Proxmox & PBS Control writes, field for field
-# (that plugin's docs/STATE-FILE.md), with writer "companion". While Proxmox Link runs it also writes companion.json
+# (docs/STATE-FILE.md), with writer "companion". While Proxmox Link runs it also writes companion.json
 # (a heartbeat) beside it, and the plugin, if it is installed too, stops writing state.json.
 #
 # Nothing else is written outside %LOCALAPPDATA%\ProxmoxLink (settings and a small log). Token secrets are kept in

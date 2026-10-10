@@ -141,7 +141,7 @@ few months), you can tick **Also accept a certificate Windows trusts** for that 
   8-second timeout for each request and 20 seconds for a whole poll. A connection that fails is tried again after 2,
   then 4, then 8, then every 12 intervals, until it answers. A call that the token isn't allowed to make is left alone
   for 10 minutes.
-- **The file:** the format is the one in the plugin's `docs/STATE-FILE.md`, with `writer: "companion"`.
+- **The file:** the format is in [docs/STATE-FILE.md](docs/STATE-FILE.md), with `writer: "companion"`.
   - Proxmox Link writes the file when something changes, at most once a second, and every 5 seconds regardless. Each
     write is whole: a temporary file is moved over `state.json`.
   - iCUE holds the file open for a moment after each change. While it does, Proxmox Link rewrites the file in place.
@@ -223,7 +223,7 @@ pwsh -NoProfile -File .\tests\Run-Tests.ps1
 
 Some tests compare Proxmox Link's file with the Stream Deck plugin's, field for field. They need the plugin's
 repository next to this one, or the `PROXMOX_PLUGIN_REPO` environment variable set to its folder. The plugin must be
-built and packaged first.
+built and packaged first. The plugin's source isn't public, so without it run the tests with `-SkipPlugin`.
 
 `tools\Build-Release.ps1` makes `dist\ProxmoxLink-<version>.zip`.
 
